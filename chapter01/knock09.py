@@ -8,16 +8,16 @@
 import random
 
 def randomize_middle_char(sentence):
-    sentence = sentence.split()
-    for idx in range(len(sentence)):
-        word = sentence[idx]
+    # sentence.split()はsentenceではない（wordsとか）
+    words = sentence.split()
+    for idx, word in enumerate(words):
         if len(word) > 4:
             start, end = word[0], word[-1]
             # list型が返されるため
             randomized_str = "".join(random.sample(word[1:-1], len(word[1:-1])))
             randomized_word = start + randomized_str + end
-            sentence[idx] = randomized_word
-    return " ".join(sentence)
+            words[idx] = randomized_word
+    return " ".join(words)
 
 ex = "I couldn't believe that I could actually understand what I was reading : the phenomenal power of the human mind ."
 print(randomize_middle_char(sentence=ex))

@@ -4,8 +4,5 @@
 '''
 word1 = "パトカー"
 word2 = "タクシー"
-ans = ""
-for i_char1, i_char2 in zip(word1, word2):
-    ans += i_char1
-    ans += i_char2
-print(ans)
+# join(ジェネレータ)の方がjoin(リスト)より計算効率良い
+print("".join(i_char1 + i_char2 for i_char1, i_char2 in zip(word1, word2)))

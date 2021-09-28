@@ -8,8 +8,8 @@ import knock05
 sample1 = "paraparaparadise"
 sample2 = "paragraph"
 
-X = set(knock05.create_char_ngram(sample1, n=2))
-Y = set(knock05.create_char_ngram(sample2, n=2))
+X = set(knock05.ngram(sample1, n=2))
+Y = set(knock05.ngram(sample2, n=2))
 
 print("和集合", X|Y)
 print("積集合", X&Y)

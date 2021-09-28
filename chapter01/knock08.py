@@ -8,8 +8,7 @@
 '''
 def cipher(string):
     ans = ""
-    for idx in range(len(string)):
-        char = string[idx]
+    for idx, char in enumerate(string):
         if char.islower():
             ans += chr(219 - ord(char))
         else:
