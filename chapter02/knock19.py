@@ -4,13 +4,17 @@
 確認にはcut, uniq, sortコマンドを用いよ．
 '''
 from collections import defaultdict
+import sys
 
-name_count = defaultdict(lambda: 0)
-with open("chapter2/data/popular-names.txt") as f_r:
+input_path = sys.argv[1]
+
+# lambda: 0にしなくてよい
+name_count = defaultdict(int)
+with open(input_path) as f_r:
     for line in f_r.readlines():
         name = line.split("\t")[0]
         name_count[name] += 1
-sorted_name_count = sorted(name_count.items(), key=lambda name_num: name_num[1], reverse=True)
-with open("chapter2/output/output_py/output19.txt", "w") as f_w:
-    f_w.write("\n".join(f"{name_num[1]} {name_num[0]}" for name_num in sorted_name_count))
-    
+
+# sortedはイテレーター
+for name, count in sorted(name_count.items(), key=lambda name_num: name_num[1], reverse=True):
+    print(f"{count} {name}")

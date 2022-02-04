@@ -6,16 +6,16 @@
 import sys 
 
 n = int(sys.argv[1])
-with open("chapter2/data/popular-names.txt") as f_r:
+input_path = sys.argv[1]
+with open(input_path) as f_r:
     lines = f_r.readlines()
-num_per_division = int(len(lines) / n)
-idx_list = list(range(0, len(lines), num_per_division))
 
-for count, (idx_begin, idx_end) in enumerate(zip(idx_list[:-1], idx_list[1:]), start=1):
-    print(count)
-    if count == n:
-        with open(f"chapter2/output/output_py/output16-{count}.txt", "w") as f_w:
-            f_w.write("".join(lines[idx_begin:]))
-    else:
-        with open(f"chapter2/output/output_py/output16-{count}.txt", "w") as f_w:
-            f_w.write("".join(lines[idx_begin:idx_end]))
+shared_size = len(lines) // n
+
+for i in range(n):
+    # 何を分岐しているのか明確に
+    with open(f"chapter02/output/output_py/output16-{i}.txt", "w") as f_w:
+        if i + 1 == n:
+            f_w.write("".join(lines[shared_size*i:]))
+        else:
+            f_w.write("".join(lines[shared_size*i:shared_size*(i+1)]))

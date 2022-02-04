@@ -5,8 +5,10 @@
 '''
 import sys
 
-n = int(sys.argv[1])
-with open("chapter2/data/popular-names.txt") as f_r:
+filename = sys.argv[1]
+n = int(sys.argv[2])
+
+with open(filename) as f_r:
     lines = f_r.readlines()
-with open("chapter2/output/output_py/output15.txt", "w") as f_w:
-    f_w.write("".join(lines[-i] for i in range(n, 0, -1)))
+    for line in lines[len(lines) - n:]:
+        print(line, end="")
