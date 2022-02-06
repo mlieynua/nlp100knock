@@ -1,1 +1,6 @@
 __pycache__/
+*.toml
+.python-version
+*.json
+poetry.lock
+chapter03/data/
