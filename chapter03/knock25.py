@@ -3,6 +3,7 @@
 記事中に含まれる「基礎情報」テンプレートのフィールド名と値を抽出し，辞書オブジェクトとして格納せよ．
 """
 import re
+
 from knock20 import load_text
 
 text_uk = load_text()

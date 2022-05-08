@@ -3,6 +3,7 @@
 27の処理に加えて，テンプレートの値からMediaWikiマークアップを可能な限り除去し，国の基本情報を整形せよ．
 """
 import re
+
 from knock20 import load_text
 
 text_uk = load_text()

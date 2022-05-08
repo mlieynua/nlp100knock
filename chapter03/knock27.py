@@ -3,6 +3,7 @@
 26の処理に加えて，テンプレートの値からMediaWikiの内部リンクマークアップを除去し，テキストに変換せよ（参考: マークアップ早見表）．
 """
 import re
+
 from knock20 import load_text
 
 text_uk = load_text()

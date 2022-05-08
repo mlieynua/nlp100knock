@@ -3,6 +3,7 @@
 記事から参照されているメディアファイルをすべて抜き出せ．
 """
 import re
+
 from knock20 import load_text
 
 text_uk = load_text()

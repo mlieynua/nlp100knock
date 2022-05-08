@@ -4,6 +4,7 @@
 （参考: マークアップ早見表）．
 """
 import re
+
 from knock20 import load_text
 
 text_uk = load_text()

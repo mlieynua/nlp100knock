@@ -3,6 +3,7 @@
 記事中でカテゴリ名を宣言している行を抽出せよ．
 """
 import re
+
 from knock20 import load_text
 
 text_uk = load_text()

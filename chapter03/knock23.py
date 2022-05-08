@@ -3,6 +3,7 @@
 記事中に含まれるセクション名とそのレベル（例えば”== セクション名 ==”なら1）を表示せよ．
 """
 import re
+
 from knock20 import load_text
 
 text_uk = load_text()
