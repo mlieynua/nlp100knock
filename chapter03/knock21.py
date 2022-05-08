@@ -6,8 +6,8 @@ import re
 from knock20 import load_text
 
 text_uk = load_text()
-for line in text_uk.split('\n'):
-    if re.match(r'\[\[Category:.+?\]\]', line):
+for line in text_uk.split("\n"):
+    if re.match(r"\[\[Category:.+?\]\]", line):
         print(line)
 
 # ab*：a・ab・aにいくつかのbにマッチ（*直前の文字はあってもなくてもよい、複数個あるなら全てマッチ）

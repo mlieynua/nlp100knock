@@ -6,8 +6,8 @@ import re
 from knock20 import load_text
 
 text_uk = load_text()
-sections = re.findall('==+[^=]+==+', text_uk)
+sections = re.findall("==+[^=]+==+", text_uk)
 for section in sections:
-    section_name = re.sub('=', "", section).strip()
-    level = int(section.count('=') / 2 - 1)
+    section_name = re.sub("=", "", section).strip()
+    level = int(section.count("=") / 2 - 1)
     print(section_name, level)

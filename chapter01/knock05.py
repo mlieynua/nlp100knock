@@ -1,8 +1,8 @@
-'''
+"""
 05. n-gram
 与えられたシーケンス（文字列やリストなど）からn-gramを作る関数を作成せよ．
 この関数を用い，"I am an NLPer"という文から単語bi-gram，文字bi-gramを得よ．
-'''
+"""
 
 
 def bigram(seq):
@@ -10,18 +10,18 @@ def bigram(seq):
 
 
 def ngram(seq, n=2):
-    '''
+    """
     n=2
     I  am [0:-2]
     am an [1:-1]
     an NLPer [2:]
-    '''
+    """
     subseq = []
     for i in range(n - 1):
         begin = i
-        end = - n + i + 1
+        end = -n + i + 1
         subseq.append(seq[begin:end])
-    subseq.append(seq[n - 1:])
+    subseq.append(seq[n - 1 :])
     # *：リストのアンパック
     return list(zip(*subseq))
 
