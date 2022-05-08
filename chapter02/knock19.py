@@ -16,5 +16,7 @@ with open(input_path) as f_r:
         name_count[name] += 1
 
 # sortedはイテレーター
-for name, count in sorted(name_count.items(), key=lambda name_num: name_num[1], reverse=True):
+for name, count in sorted(name_count.items(),
+                          key=lambda name_num: name_num[1],
+                          reverse=True):
     print(f"{count} {name}")

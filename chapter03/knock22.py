@@ -8,5 +8,3 @@ from knock20 import load_text
 text_uk = load_text()
 for category_name in re.findall(r"\[\[Category:(.+?)\]\]", text_uk):
     print(category_name)
-
-

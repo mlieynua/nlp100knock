@@ -6,6 +6,8 @@
 その他の文字はそのまま出力
 この関数を用い，英語のメッセージを暗号化・復号化せよ．
 '''
+
+
 def cipher(string):
     ans = ""
     for idx, char in enumerate(string):
@@ -14,6 +16,7 @@ def cipher(string):
         else:
             ans += char
     return ans
+
 
 print(cipher(string="HoGe FugA"))
 print(cipher(cipher(string="HoGe FugA")))

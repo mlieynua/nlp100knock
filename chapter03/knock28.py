@@ -8,6 +8,7 @@ from knock20 import load_text
 text_uk = load_text()
 basic_info = {}
 
+
 def get_basic_info():
     for line in text_uk.split('\n'):
         basic_info_line = re.findall(r'\|(.+)\s=\s*(.+)', line)
@@ -28,6 +29,7 @@ def get_basic_info():
             value = re.sub(r"<ref>.+?</ref>", "", value)
             basic_info[field_name] = value
     return basic_info
+
 
 if __name__ == "__main__":
     basic_info = get_basic_info()

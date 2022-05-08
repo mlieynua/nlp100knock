@@ -16,6 +16,8 @@ for line in text_uk.split('\n'):
 
         value_deleted_bold = re.sub(r"'", "", value)
         # \2：かっこの2つ目のみ残す
-        value_deleted_bold_and_link = re.sub(r'\[\[(.+\||)(.+?)\]\]', r'\2', value_deleted_bold)
+        value_deleted_bold_and_link = re.sub(r'\[\[(.+\||)(.+?)\]\]',
+                                             r'\2',
+                                             value_deleted_bold)
         basic_info[field_name] = value_deleted_bold_and_link
 print(basic_info)

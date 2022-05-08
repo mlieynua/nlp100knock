@@ -9,5 +9,7 @@ input_path = sys.argv[1]
 
 with open(input_path) as f_r:
     lines = f_r.readlines()
-    lines = sorted(lines, key=lambda line: float(line.split("\t")[2]), reverse=True)
+    lines = sorted(lines,
+                   key=lambda line: float(line.split("\t")[2]),
+                   reverse=True)
     print("".join(lines))
